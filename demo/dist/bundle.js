@@ -23418,7 +23418,7 @@ const Select_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Selec
 const MenuItem_1 = __importDefault(__webpack_require__(/*! @material-ui/core/MenuItem */ "./node_modules/@material-ui/core/esm/MenuItem/index.js"));
 const Typography_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js"));
 const EvaluationRadio_1 = __webpack_require__(/*! ./EvaluationRadio */ "./src/evaluation_chip/ui/EvaluationRadio.tsx");
-exports.SelectMatrix = (props) => {
+exports.SelectMatrix = react_1.default.memo((props) => {
     return (react_1.default.createElement(DialogActions_1.default, null,
         react_1.default.createElement(Select_1.default, { value: props.evaluationType, onChange: props.onChange },
             react_1.default.createElement(MenuItem_1.default, { value: "3x3" },
@@ -23427,7 +23427,7 @@ exports.SelectMatrix = (props) => {
                 react_1.default.createElement(Typography_1.default, null, "5x5")),
             react_1.default.createElement(MenuItem_1.default, { value: "7x7" },
                 react_1.default.createElement(Typography_1.default, null, "7x7")))));
-};
+});
 exports.EvaluationDialog = (props) => {
     const { open, onCommit, onCancel, evaluationType, evaluationArg } = props;
     const [selectedEvaluationType, setSelectedEvaluationType] = react_1.useState(evaluationType);
@@ -23440,11 +23440,11 @@ exports.EvaluationDialog = (props) => {
     };
     const onChangeSourceRank = (event) => {
         const sourceRank = event.currentTarget.value;
-        setEvaluationStatus(Object.assign({}, evaluationStatus, Object.assign({}, evaluationStatus, { rank: Object.assign({}, evaluationStatus.rank, { sourceRank: sourceRank }) })));
+        setEvaluationStatus(Object.assign({}, evaluationStatus, { rank: Object.assign({}, evaluationStatus.rank, { sourceRank: sourceRank }) }));
     };
     const onChangeInfoRank = (event) => {
         const infoRank = event.currentTarget.value;
-        setEvaluationStatus(Object.assign({}, evaluationStatus, Object.assign({}, evaluationStatus, { rank: Object.assign({}, evaluationStatus.rank, { infoRank: infoRank }) })));
+        setEvaluationStatus(Object.assign({}, evaluationStatus, { rank: Object.assign({}, evaluationStatus.rank, { infoRank: infoRank }) }));
     };
     const onChangeMalformtype = (event) => {
     };
@@ -23562,20 +23562,20 @@ exports.EvaluationRadio3x3 = react_1.default.memo((props) => {
             react_1.default.createElement(FormLabel_1.default, { component: "label" },
                 react_1.default.createElement(Typography_1.default, null, "Source Rank")),
             react_1.default.createElement(RadioGroup_1.default, { value: props.evaluationArg.rank.sourceRank, onChange: props.onChangeSourceRank },
-                react_1.default.createElement(FormControlLabel_1.default, { value: "N", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("N", [Data3x3_1.data_N_0_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "N", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "N", descriptionList: [Data3x3_1.data_N_0_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "A", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("A", [Data3x3_1.data_A_0_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "A", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "A", descriptionList: [Data3x3_1.data_A_0_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "B", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("B", [Data3x3_1.data_B_0_en]) }))),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "B", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "B", descriptionList: [Data3x3_1.data_B_0_en] }) }))),
         react_1.default.createElement(FormControl_1.default, { component: "fieldset" },
             react_1.default.createElement(FormLabel_1.default, { component: "label" },
                 react_1.default.createElement(Typography_1.default, null, "Info Rank")),
             react_1.default.createElement(RadioGroup_1.default, { value: props.evaluationArg.rank.infoRank.toString(), onChange: props.onChangeInfoRank },
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(0), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(0), [Data3x3_1.data_0_0_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "0", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "0", descriptionList: [Data3x3_1.data_0_0_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(1), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(1), [Data3x3_1.data_1_0_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "1", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "1", descriptionList: [Data3x3_1.data_1_0_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(2), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(2), [Data3x3_1.data_2_0_en]) })))));
+                react_1.default.createElement(FormControlLabel_1.default, { value: "2", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "2", descriptionList: [Data3x3_1.data_2_0_en] }) })))));
 });
 
 
@@ -23612,28 +23612,28 @@ exports.EvaluationRadio5x5 = react_1.default.memo((props) => {
             react_1.default.createElement(FormLabel_1.default, { component: "label" },
                 react_1.default.createElement(Typography_1.default, null, "Source Rank")),
             react_1.default.createElement(RadioGroup_1.default, { value: props.evaluationArg.rank.sourceRank, onChange: props.onChangeSourceRank },
-                react_1.default.createElement(FormControlLabel_1.default, { value: "N", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("N", [Data5x5_1.data_N_0_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "N", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "N", descriptionList: [Data5x5_1.data_N_0_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "A", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("A", [Data5x5_1.data_A_0_en, Data5x5_1.data_A_1_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "A", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "A", descriptionList: [Data5x5_1.data_A_0_en, Data5x5_1.data_A_1_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "B", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("B", [Data5x5_1.data_B_0_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "B", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "B", descriptionList: [Data5x5_1.data_B_0_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "C", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("C", [Data5x5_1.data_C_0_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "C", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "C", descriptionList: [Data5x5_1.data_C_0_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "X", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("X", [Data5x5_1.data_X_0_en]) }))),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "X", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "X", descriptionList: [Data5x5_1.data_X_0_en] }) }))),
         react_1.default.createElement(FormControl_1.default, { component: "fieldset" },
             react_1.default.createElement(FormLabel_1.default, { component: "label" },
                 react_1.default.createElement(Typography_1.default, null, "Info Rank")),
             react_1.default.createElement(RadioGroup_1.default, { value: props.evaluationArg.rank.infoRank.toString(), onChange: props.onChangeInfoRank },
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(0), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(0), [Data5x5_2.data_0_0_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "0", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "0", descriptionList: [Data5x5_2.data_0_0_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(1), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(1), [Data5x5_2.data_1_0_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "1", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "1", descriptionList: [Data5x5_2.data_1_0_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(2), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(2), [Data5x5_2.data_2_0_en, Data5x5_2.data_2_1_en, Data5x5_2.data_2_2_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "2", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "2", descriptionList: [Data5x5_2.data_2_0_en, Data5x5_2.data_2_1_en, Data5x5_2.data_2_2_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(3), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(3), [Data5x5_2.data_3_0_en]) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "3", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "3", descriptionList: [Data5x5_2.data_3_0_en] }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(4), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(4), [Data5x5_2.data_4_0_en]) })))));
+                react_1.default.createElement(FormControlLabel_1.default, { value: "4", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "4", descriptionList: [Data5x5_2.data_4_0_en] }) })))));
 });
 
 
@@ -23672,36 +23672,36 @@ exports.EvaluationRadio7x7 = react_1.default.memo((props) => {
             react_1.default.createElement(FormLabel_1.default, { component: "label" },
                 react_1.default.createElement(Typography_1.default, null, "Source Rank")),
             react_1.default.createElement(RadioGroup_1.default, { value: props.evaluationArg.rank.sourceRank, onChange: props.onChangeSourceRank },
-                react_1.default.createElement(FormControlLabel_1.default, { value: "N", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("N", [Data7x7_1.data_N_0_en], Data7x7_2.data_N_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "N", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "N", descriptionList: [Data7x7_1.data_N_0_en], digest: Data7x7_2.data_N_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "A", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("A", [Data7x7_1.data_A_0_en, Data7x7_1.data_A_1_en], Data7x7_2.data_A_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "A", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "A", descriptionList: [Data7x7_1.data_A_0_en, Data7x7_1.data_A_1_en], digest: Data7x7_2.data_A_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "B", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("B", [Data7x7_1.data_B_0_en, Data7x7_1.data_B_1_en], Data7x7_2.data_B_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "B", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "B", descriptionList: [Data7x7_1.data_B_0_en, Data7x7_1.data_B_1_en], digest: Data7x7_2.data_B_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "C", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("C", [Data7x7_1.data_C_0_en, Data7x7_1.data_C_1_en], Data7x7_2.data_C_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "C", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "C", descriptionList: [Data7x7_1.data_C_0_en, Data7x7_1.data_C_1_en], digest: Data7x7_2.data_C_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "D", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("D", [Data7x7_1.data_D_0_en, Data7x7_1.data_D_1_en], Data7x7_2.data_D_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "D", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "D", descriptionList: [Data7x7_1.data_D_0_en, Data7x7_1.data_D_1_en], digest: Data7x7_2.data_D_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "E", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("E", [Data7x7_1.data_E_0_en, Data7x7_1.data_E_1_en], Data7x7_2.data_E_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "E", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "E", descriptionList: [Data7x7_1.data_E_0_en, Data7x7_1.data_E_1_en], digest: Data7x7_2.data_E_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: "F", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent("F", [Data7x7_1.data_F_0_en], Data7x7_2.data_F_digest_en) }))),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "F", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "F", descriptionList: [Data7x7_1.data_F_0_en], digest: Data7x7_2.data_F_digest_en }) }))),
         react_1.default.createElement(FormControl_1.default, { component: "fieldset" },
             react_1.default.createElement(FormLabel_1.default, { component: "label" },
                 react_1.default.createElement(Typography_1.default, null, "Info Rank")),
             react_1.default.createElement(RadioGroup_1.default, { value: props.evaluationArg.rank.infoRank.toString(), onChange: props.onChangeInfoRank },
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(0), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(0), [Data7x7_3.data_0_0_en], Data7x7_4.data_0_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "0", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "0", descriptionList: [Data7x7_3.data_0_0_en], digest: Data7x7_4.data_0_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(1), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(1), [Data7x7_3.data_1_0_en, Data7x7_3.data_1_1_en, Data7x7_3.data_1_2_en], Data7x7_4.data_0_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "1", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "1", descriptionList: [Data7x7_3.data_1_0_en, Data7x7_3.data_1_1_en, Data7x7_3.data_1_2_en], digest: Data7x7_4.data_1_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(2), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(2), [Data7x7_3.data_2_0_en, Data7x7_3.data_2_1_en, Data7x7_3.data_2_2_en], Data7x7_4.data_1_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "2", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "2", descriptionList: [Data7x7_3.data_2_0_en, Data7x7_3.data_2_1_en, Data7x7_3.data_2_2_en], digest: Data7x7_4.data_2_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(3), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(3), [Data7x7_3.data_3_0_en, Data7x7_3.data_3_1_en, Data7x7_3.data_3_2_en], Data7x7_4.data_2_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "3", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "3", descriptionList: [Data7x7_3.data_3_0_en, Data7x7_3.data_3_1_en, Data7x7_3.data_3_2_en], digest: Data7x7_4.data_3_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(4), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(4), [Data7x7_3.data_4_0_en, Data7x7_3.data_4_1_en, Data7x7_3.data_4_2_en], Data7x7_4.data_3_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "4", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "4", descriptionList: [Data7x7_3.data_4_0_en, Data7x7_3.data_4_1_en, Data7x7_3.data_4_2_en], digest: Data7x7_4.data_4_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(5), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(5), [Data7x7_3.data_5_0_en, Data7x7_3.data_5_1_en, Data7x7_3.data_5_2_en], Data7x7_4.data_4_digest_en) }),
+                react_1.default.createElement(FormControlLabel_1.default, { value: "5", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "5", descriptionList: [Data7x7_3.data_5_0_en, Data7x7_3.data_5_1_en, Data7x7_3.data_5_2_en], digest: Data7x7_4.data_5_digest_en }) }),
                 react_1.default.createElement(Divider_1.default, { variant: "middle" }),
-                react_1.default.createElement(FormControlLabel_1.default, { value: String(6), control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: RadioContentProvider_1.provideContent(String(6), [Data7x7_3.data_6_0_en], Data7x7_4.data_6_digest_en) })))));
+                react_1.default.createElement(FormControlLabel_1.default, { value: "6", control: react_1.default.createElement(Radio_1.default, { color: "primary", disableRipple: true }), label: react_1.default.createElement(RadioContentProvider_1.ProvideContent, { signature: "6", descriptionList: [Data7x7_3.data_6_0_en], digest: Data7x7_4.data_6_digest_en }) })))));
 });
 
 
@@ -23725,7 +23725,8 @@ const List_1 = __importDefault(__webpack_require__(/*! @material-ui/core/List */
 const ListItem_1 = __importDefault(__webpack_require__(/*! @material-ui/core/ListItem */ "./node_modules/@material-ui/core/esm/ListItem/index.js"));
 const Typography_1 = __importDefault(__webpack_require__(/*! @material-ui/core/Typography */ "./node_modules/@material-ui/core/esm/Typography/index.js"));
 const styles_1 = __webpack_require__(/*! @material-ui/styles */ "./node_modules/@material-ui/styles/esm/index.js");
-exports.provideContent = (signature, descriptionList, digest) => {
+exports.ProvideContent = react_1.default.memo((props) => {
+    const { signature, descriptionList, digest } = props;
     const useStyles = styles_1.makeStyles({
         root: {
             display: 'flex',
@@ -23765,7 +23766,7 @@ exports.provideContent = (signature, descriptionList, digest) => {
             react_1.default.createElement(ListItem_1.default, null,
                 react_1.default.createElement("ul", { className: classes.ul }, description))));
     }
-};
+}, () => true);
 
 
 /***/ }),
@@ -23841,7 +23842,7 @@ const EvaluationChipDemo = () => {
     });
     const classes = useStyles({});
     return (React.createElement("div", { className: classes.background },
-        React.createElement(Typography_1.default, { variant: "body2" }, "Last update: 2019/07/29"),
+        React.createElement(Typography_1.default, { variant: "body2" }, "Last update: 2019/07/30"),
         React.createElement("div", { className: classes.frame },
             React.createElement(Divider_1.default, { variant: "middle" }),
             React.createElement("div", { className: classes.chipTitle },
