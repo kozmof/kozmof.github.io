@@ -2,3 +2,15 @@ baseURL = 'https://kozmof.github.io/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = "bare"
+
+[params]
+mainSections = ["posts"]
+author = "foo"
+email = "bar"
+description = 'baz'
+postcss = true
+# Include the author name in the <title> of articles
+includeAuthorInTitle = true
+# Can be any colour here: https://bulma.io/documentation/layout/hero/#colors
+# e.g "warning" or "danger" for yellow or red.
+hero_colour = "info"
