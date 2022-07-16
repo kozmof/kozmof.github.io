@@ -8,7 +8,7 @@ mainSections = ["posts"]
 author = "foo"
 email = "bar"
 description = 'baz'
-postcss = true
+# postcss = true
 # Include the author name in the <title> of articles
 includeAuthorInTitle = true
 # Can be any colour here: https://bulma.io/documentation/layout/hero/#colors
