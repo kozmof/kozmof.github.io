@@ -6,4 +6,4 @@ draft: false
 
 Test
 
-![Example image](/static/img/test.drawio.png)
+![Example image](/img/test.drawio.png)
