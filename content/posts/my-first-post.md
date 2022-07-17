@@ -5,3 +5,4 @@ draft: false
 ---
 Test
 
+![Example image](/static/img/test.drawio.png)

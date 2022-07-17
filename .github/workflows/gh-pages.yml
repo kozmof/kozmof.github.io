@@ -21,6 +21,13 @@ jobs:
           hugo-version: 'latest'
           # extended: true
 
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "/static/img"
+          replace: "/img"
+          include: "content/posts/**"
+
       - name: Build
         run: hugo --minify
 
