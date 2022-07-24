@@ -7,7 +7,7 @@ theme = "bare"
 
 [params]
 author = "kozmof"
-description = "note it."
+description = "log"
 includeAuthorInTitle = true
 
 # https://materialdesignicons.com/
