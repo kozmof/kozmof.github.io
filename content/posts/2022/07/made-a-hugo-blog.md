@@ -1,7 +1,7 @@
 ---
 title: ブログをつくった
 date: 2022-07-25
-draft: true
+draft: false
 tags: ['hugo']
 ---
 
