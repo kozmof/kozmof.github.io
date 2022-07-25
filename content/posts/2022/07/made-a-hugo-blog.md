@@ -15,7 +15,7 @@ GitHub Pages + GitHub Actions + Hugo で push 後はデプロイまで全任せ�
 
 ## 作業記録
 
-- エディタ上でプレビューできる画像のパスとビルド後に参照可能なパスが変わるため、投稿用ディレクトリ内にあるファイルの `/static/img` をビルド前に `/img` に書き換える処理を GitHub Actions に追加した。他にいい方法があるかもしれない。
+- エディタ上でプレビューできる画像のパスとビルド後に参照可能なパスが変わるため、投稿用ディレクトリ内にあるファイルの `/static/static/img` をビルド前に `/img` に書き換える処理を GitHub Actions に追加した。他にいい方法があるかもしれない。
 - Action を SHA-1 checksum 指定にした。
 - 使っている theme が submodule を再起的に取得する必要があるものだったので gh-pages.yml で `submodules: recursive` を指定した。
 
