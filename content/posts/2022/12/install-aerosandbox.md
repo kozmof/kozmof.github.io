@@ -2,7 +2,7 @@
 title: AeroSandbox をインストールする
 date: 2022-12-03
 draft: false
-tags: ['f1, python, aerosandbox']
+tags: ['f1', 'python', 'aerosandbox']
 ---
 
 F1 のシーズンが終わってしまったので、なにか F1 っぽいものをということで見つけた空力シミュレーションライブラリの `AeroSandbox` を入れてみた。ふつうにインストールすると依存先の `xfoil` で `zip_save` がないというエラーが原因でインストールできなかったので、ワークアラウンドをメモする。
