@@ -1,5 +1,5 @@
 ---
-title: AeroSandbox をインストールする
+title: AeroSandbox をインストールした
 date: 2022-12-03
 draft: false
 tags: ['f1', 'python', 'aerosandbox']
