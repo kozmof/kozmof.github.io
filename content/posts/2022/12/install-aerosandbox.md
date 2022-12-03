@@ -5,7 +5,7 @@ draft: false
 tags: ['f1', 'python', 'aerosandbox']
 ---
 
-F1 のシーズンが終わってしまったので、なにか F1 っぽいものをということで見つけた空力シミュレーションライブラリの `AeroSandbox` を入れてみた。ふつうにインストールすると依存先の `xfoil` で `zip_save` がないというエラーが原因でインストールできなかったので、ワークアラウンドをメモする。
+F1 のシーズンが終わってしまったので、なにか F1 っぽいものをということで見つけた空力シミュレーションライブラリの `AeroSandbox` を入れてみた。ふつうにインストールすると依存先の `xfoil-python` で `zip_save` がないというエラーが原因でインストールできなかったので、ワークアラウンドをメモする。
 
 ### AeroSandbox
 
@@ -23,13 +23,13 @@ https://github.com/peterdsharpe/AeroSandbox
 
 1. `zip_save` がないというエラーは https://github.com/DARcorporation/xfoil-python/pull/18 で対応済みだったので、ワーキングディレクトリで、 `git clone https://github.com/DARcorporation/xfoil-python.git` する
 
-2. `xfoil` のインストールには `gcc` と `gfortran` がいるのでそれぞれインストールする。
+2. `xfoil-python` のインストールには `gcc` と `gfortran` がいるのでそれぞれインストールする。
 
 ```
 sudo apt install build-essential
 sudo apt install gfortran
 ```
-3. クローンしたディレクトリに移動して `xfoil` を単体でインストールする。
+3. クローンしたディレクトリに移動して `xfoil-python` を単体でインストールする。
 
 ```
 cd xfoil-python
