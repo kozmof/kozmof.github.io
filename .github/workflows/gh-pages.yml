@@ -28,8 +28,8 @@ jobs:
           replace: "/img"
           include: "content/posts/**"
 
-      - name: Build
-        run: hugo --minify
+      # - name: Build
+        # run: hugo --minify
 
       # - name: Deploy
       # uses: peaceiris/actions-gh-pages@v3
