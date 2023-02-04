@@ -19,7 +19,7 @@ GitHub Pages + GitHub Actions + Hugoでpush後はデプロイまで全任せす�
 - ActionをSHA-1 checksum指定にした。
 - 使っているthemeがsubmoduleを再帰的に取得する必要があるものだったのでgh-pages.ymlで`submodules: recursive`を指定した。
 
-### やりたいこと
+## やりたいこと
 
 - 日本語の文章用のlinterを入れるかつくるかする
 - 更新日時の表示
