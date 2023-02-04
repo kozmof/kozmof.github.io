@@ -1,0 +1,25 @@
+:root {
+    --maincolor: red;
+    --mainLinkColor: #2483ff;
+    --bordercl: rebeccapurple;
+    --callouctcolor: dodgerblue;
+    --hovercolor: navy;
+    --darkMaincolor: #50fa7b;
+}
+
+a {
+    border-bottom: 1px solid var(--mainLinkColor);
+}
+
+footer {
+    border-top: none;
+}
+
+.tags a {
+    border-bottom: 1px solid var(--mainLinkColor);
+}
+
+ul > li::before {
+    content: '- ';
+    font-weight: normal;
+}
