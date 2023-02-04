@@ -1,5 +1,5 @@
 ---
-title: Git でコンフリクト解消後の記録
+title: Gitでコンフリクト解消後の記録
 date: 2022-12-02
 draft: false
 tags: ['git']
