@@ -37,20 +37,20 @@
 </div>
 <section class=body>
 <p>とくに記録的な文章を書いてなかった 2、3 年の間に世の中が変わりまくっていて、後から振り返られる文章を書く習慣がなかったことが悔やまれるので、今からでも記憶の断片化をどうにかしようということでブログをつくった。</p>
-<h3 id=構成>構成</h3>
-<p>GitHub Pages + GitHub Actions + Hugo で push 後はデプロイまで全任せすることにした。</p>
-<p>執筆は iPhone 経由の場合は Working Copy を使う。 この文章も iPhone で書いている。</p>
-<h3 id=作業記録>作業記録</h3>
+<h2 id=構成>構成</h2>
+<p>GitHub Pages + GitHub Actions + Hugoでpush後はデプロイまで全任せすることにした。</p>
+<p>執筆はiPhone経由の場合はWorking Copyを使う。 この文章もiPhoneで書いている。</p>
+<h2 id=作業記録>作業記録</h2>
 <ul>
-<li>エディタ上でプレビューできる画像のパスとビルド後に参照可能なパスが変わるため、投稿用ディレクトリ内にあるファイルの <code>/static/img</code> をビルド前に <code>/img</code> に書き換える処理を GitHub Actions に追加した。他にいい方法があるかもしれない。</li>
-<li>Action を SHA-1 checksum 指定にした。</li>
-<li>使っている theme が submodule を再帰的に取得する必要があるものだったので gh-pages.yml で <code>submodules: recursive</code> を指定した。</li>
+<li>エディタ上でプレビューできる画像のパスとビルド後に参照可能なパスが変わるため、投稿用ディレクトリ内にあるファイルの<code>/static/img</code>をビルド前に<code>/img</code>に書き換える処理をGitHub Actionsに追加した。他にいい方法があるかもしれない。</li>
+<li>ActionをSHA-1 checksum指定にした。</li>
+<li>使っているthemeがsubmoduleを再帰的に取得する必要があるものだったのでgh-pages.ymlで<code>submodules: recursive</code>を指定した。</li>
 </ul>
 <h3 id=やりたいこと>やりたいこと</h3>
 <ul>
-<li>日本語の文章用の linter を入れるかつくるかする</li>
+<li>日本語の文章用のlinterを入れるかつくるかする</li>
 <li>更新日時の表示</li>
-<li>push 時の日時を使う</li>
+<li>push時の日時を使う</li>
 </ul>
 </section>
 <div class=post-tags>
