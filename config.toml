@@ -3,14 +3,21 @@ languageCode = 'ja'
 defaultContentLanguage = "ja"
 hasCJKLanguage = true
 title = 'kozmof.github.io'
-theme = "bare"
+theme = "archie"
 
 [params]
 author = "kozmof"
 description = "log"
 includeAuthorInTitle = true
+mode="toggle"
+customcss = ["css/custom.css"]
 
 # https://materialdesignicons.com/
 [[params.social]]
 icon = "twitter"
 url = "https://twitter.com/kozmof"
+
+[[menu.main]]
+name = "Tags"
+url = "/tags"
+weight = 1
