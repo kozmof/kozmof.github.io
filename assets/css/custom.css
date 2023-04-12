@@ -1,7 +1,7 @@
 :root {
     --maincolor: red;
     --mainLinkColor: #2483ff;
-    --bordercl: rebeccapurple;
+    --bordercl: rgb(0, 38, 255);
     --callouctcolor: dodgerblue;
     --hovercolor: navy;
     --darkMaincolor: #50fa7b;
@@ -22,4 +22,14 @@ footer {
 ul > li::before {
     content: '- ';
     font-weight: normal;
+}
+
+ul > li {
+    margin: auto auto 0.3em;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--bordercl);
+    margin: 1em 0;
 }
