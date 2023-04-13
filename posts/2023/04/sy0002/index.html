@@ -1,0 +1,69 @@
+<!doctype html><html><head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge"><title>設計夜行[0002] セル - kozmof.github.io</title><meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="ここではHandsontableやTabulatorなどのフレームワークとしてのセルについて考える。 表示 最もシンプルなセルはユーザーの入力を">
+<meta property="og:image" content>
+<meta property="og:title" content="設計夜行[0002] セル">
+<meta property="og:description" content="ここではHandsontableやTabulatorなどのフレームワークとしてのセルについて考える。 表示 最もシンプルなセルはユーザーの入力を">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://kozmof.github.io/posts/2023/04/sy0002/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2023-04-13T00:00:00+00:00">
+<meta property="article:modified_time" content="2023-04-13T00:00:00+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="設計夜行[0002] セル">
+<meta name=twitter:description content="ここではHandsontableやTabulatorなどのフレームワークとしてのセルについて考える。 表示 最もシンプルなセルはユーザーの入力を">
+<script src=https://kozmof.github.io/js/feather.min.js></script>
+<link href=https://kozmof.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css rel=stylesheet>
+<link rel=stylesheet type=text/css media=screen href=https://kozmof.github.io/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css>
+<link id=darkModeStyle rel=stylesheet type=text/css href=https://kozmof.github.io/css/dark.726cd11ca6eb7c4f7d48eb420354f814e5c1b94281aaf8fd0511c1319f7f78a4.css disabled>
+<link rel=stylesheet type=text/css href=https://kozmof.github.io/css/custom.061474f2463a7a170153a6c2decf4ad0f1883c5ab3370078d113feab6353a74e.css>
+</head>
+<body>
+<div class=content><header>
+<div class=main>
+<a href=https://kozmof.github.io/>kozmof.github.io</a>
+</div>
+<nav>
+<a href=/tags>Tags</a>
+| <span id=dark-mode-toggle onclick=toggleTheme()></span>
+<script src=https://kozmof.github.io/js/themetoggle.js></script>
+</nav>
+</header>
+<main>
+<article>
+<div class=title>
+<h1 class=title>設計夜行[0002] セル</h1>
+<div class=meta>Posted on 4月 13, 2023</div>
+</div>
+<section class=body>
+<p>ここではHandsontableやTabulatorなどのフレームワークとしてのセルについて考える。</p>
+<h2 id=表示>表示</h2>
+<p>最もシンプルなセルはユーザーの入力をそのまま格納し、その値を表示するセルだが、これだけでは収まらないケースが出てくる。</p>
+<p>例えばセルをリスト形式で選ぶ際に内部で持っている値はidとして保持したく、なおかつidを表示用に変換しなければならない場合が当てはまる。</p>
+<p>つまりセルでは表示用と内部で保持している値は一致することはあるが別であると考えるべきで、<code>内部の値 -> (関数) -> 表示の値</code>の仕組みが必要である。そしてこの関数を定義できる必要がある。</p>
+<h2 id=ユーザー入力>ユーザー入力</h2>
+<p>表示と同じでユーザーの入力をそのまま使用したくないケースは多々ある。よってユーザー入力も<code>入力値 -> (関数) -> 内部の値</code>の仕組みが必要であり、この関数を定義できる必要がある。</p>
+<h2 id=内部の値はセルの構成要素か>内部の値はセルの構成要素か?</h2>
+<p>ここまででセルは関数を介して入力値を内部の値用に変換し、また内部の値を表示用に変換する機能を持つものであることが分かる。</p>
+<p>ここで内部の値はセルの構成要素なのかという疑問が出てくる。言い換えると状態管理をテーブル編集フレームワークの責務にするべきかということで、例えばTabulatorは状態管理が一体化しているため、Reduxを使いたい時に状態の2重管理が発生してしまう。</p>
+<p>セルは何列何行目かが分かればいいので、たとえフレームワーク側でデフォルトの状態管理ロジックをつくったとしても切り離せる設計の方が良く、テーブル編集フレームワークの責務にはしない方がいいと考える。</p>
+</section>
+<div class=post-tags>
+<nav class="nav tags">
+<ul class=tags>
+<li><a href=/tags/%E8%A8%AD%E8%A8%88%E5%A4%9C%E8%A1%8C>設計夜行</a></li>
+</ul>
+</nav>
+</div>
+</article>
+</main>
+<footer>
+<div style=display:flex><a class=soc href=https://twitter.com/kozmof rel=me title><i data-feather=twitter></i></a>
+<a class=border></a></div>
+<div class=footer-info>
+2023 <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a>
+</div>
+</footer>
+<script>feather.replace()</script></div>
+</body>
+</html>
