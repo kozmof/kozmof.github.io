@@ -11,6 +11,7 @@ description = "log"
 includeAuthorInTitle = true
 mode="toggle"
 customcss = ["css/custom.css"]
+historyBaseURL = "https://github.com/kozmof/kozmof.github.io/commits/main/content/"
 
 # https://materialdesignicons.com/
 [[params.social]]
