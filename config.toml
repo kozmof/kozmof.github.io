@@ -12,6 +12,8 @@ includeAuthorInTitle = true
 mode="toggle"
 customcss = ["css/custom.css"]
 historyBaseURL = "https://github.com/kozmof/kozmof.github.io/commits/main/content/"
+defaultModelHDRPath = "hdr/lake_pier_1k.hdr"
+defaultModelMinHeight = "500px"
 
 # https://materialdesignicons.com/
 [[params.social]]
