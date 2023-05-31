@@ -2,7 +2,7 @@ baseURL = 'https://kozmof.github.io/'
 languageCode = 'ja'
 defaultContentLanguage = "ja"
 hasCJKLanguage = true
-title = 'kozmof.github.io'
+title = 'log out'
 theme = "archie"
 
 [params]
@@ -12,6 +12,8 @@ includeAuthorInTitle = true
 mode="toggle"
 customcss = ["css/custom.css"]
 historyBaseURL = "https://github.com/kozmof/kozmof.github.io/commits/main/content/"
+defaultModelHDRPath = "hdr/lake_pier_1k.hdr"
+defaultModelMinHeight = "500px"
 
 # https://materialdesignicons.com/
 [[params.social]]
