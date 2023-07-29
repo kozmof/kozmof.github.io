@@ -37,5 +37,6 @@ hr {
 
 .highlight {
     background-color: white;
-    color: #1a1a1a
+    color: #1a1a1a;
+    font-size: 15px;
 }
