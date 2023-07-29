@@ -21,7 +21,7 @@ footer {
 }
 
 ul > li::before {
-    content: '- ';
+    content: '・';
     font-weight: normal;
 }
 
