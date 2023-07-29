@@ -15,6 +15,11 @@ historyBaseURL = "https://github.com/kozmof/kozmof.github.io/commits/main/conten
 defaultModelHDRPath = "hdr/lake_pier_1k.hdr"
 defaultModelMinHeight = "500px"
 
+[markup]
+  [markup.highlight]
+    lineNos = true
+    style = "pastie"
+
 # https://materialdesignicons.com/
 [[params.social]]
 icon = "twitter"
