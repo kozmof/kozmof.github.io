@@ -16,7 +16,7 @@
 <link href=https://kozmof.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css rel=stylesheet>
 <link rel=stylesheet type=text/css media=screen href=https://kozmof.github.io/css/main.471d35085b12235392ba2d98fc3355f902fa805ca465f1c0ad3facc5087d7871.css>
 <link id=darkModeStyle rel=stylesheet type=text/css href=https://kozmof.github.io/css/dark.73a166dae74afcfcdaefd254420a6b7358572e98210591cf63bd750b615320f1.css disabled>
-<link rel=stylesheet type=text/css href=https://kozmof.github.io/css/custom.742a92595bdf71bed5f05bf83a62788d5af1fe8fd81b1c5d9761885dc3c8b12e.css>
+<link rel=stylesheet type=text/css href=https://kozmof.github.io/css/custom.32269f933e74829ab64aa6c676d5102b88d94155a90b89b3e4c9e306f985305f.css>
 </head>
 <body>
 <div class=content><header>
@@ -28,6 +28,7 @@
 | <span id=dark-mode-toggle onclick=toggleTheme()></span> |
 <script src=https://kozmof.github.io/js/themetoggle.js></script>
 <a class=change-history alia-label="See change histories of this page" href=https://github.com/kozmof/kozmof.github.io/commits/main/content/posts/2023/04/add-change-history-link.md>変更履歴</a>
+| <a class=scrap-section alia-label="Jump to scrap section" href=https://kozmof.github.io//scrap>スクラップ</a>
 </nav>
 </header>
 <main>
@@ -38,18 +39,39 @@
 </div>
 <section class=body>
 <p>右上に「変更履歴」リンクを追加した。現在は<a href=https://github.com/athul/archie>Archie</a>というテーマを使用しているので(CSSは一部<a href=https://github.com/kozmof/kozmof.github.io/blob/main/assets/css/custom.css>custom.css</a>で変更している)、これをフォークして<code>head.html</code>に下記を追加した。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{- $githubHistory := $.Site.Params.historyBaseURL }}
+<div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>{{- $githubHistory := $.Site.Params.historyBaseURL }}
 {{ with .Page.File }}
     {{- $currentRelPath := .Path -}}
-    &lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;change-history&#34;</span> <span style=color:#a6e22e>alia-label</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;See change histories of this page&#34;</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{{ print $githubHistory $currentRelPath }}&#34;</span>&gt;変更履歴&lt;/<span style=color:#f92672>a</span>&gt;
+    &lt;<span style=color:#b06;font-weight:700>a</span> <span style=color:#369>class</span>=<span style=color:#d20;background-color:#fff0f0>&#34;change-history&#34;</span> <span style=color:#369>alia-label</span>=<span style=color:#d20;background-color:#fff0f0>&#34;See change histories of this page&#34;</span> <span style=color:#369>href</span>=<span style=color:#d20;background-color:#fff0f0>&#34;{{ print $githubHistory $currentRelPath }}&#34;</span>&gt;変更履歴&lt;/<span style=color:#b06;font-weight:700>a</span>&gt;
 {{ else }}
-    &lt;<span style=color:#f92672>a</span> <span style=color:#a6e22e>class</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;change-history&#34;</span> <span style=color:#a6e22e>alia-label</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;See change histories of this page&#34;</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;{{ print $githubHistory }}&#34;</span>&gt;変更履歴&lt;/<span style=color:#f92672>a</span>&gt;
+    &lt;<span style=color:#b06;font-weight:700>a</span> <span style=color:#369>class</span>=<span style=color:#d20;background-color:#fff0f0>&#34;change-history&#34;</span> <span style=color:#369>alia-label</span>=<span style=color:#d20;background-color:#fff0f0>&#34;See change histories of this page&#34;</span> <span style=color:#369>href</span>=<span style=color:#d20;background-color:#fff0f0>&#34;{{ print $githubHistory }}&#34;</span>&gt;変更履歴&lt;/<span style=color:#b06;font-weight:700>a</span>&gt;
 {{ end }}
-</code></pre></div><p>各投稿ページではGitHubのそれぞれの変更履歴に飛び、トップページやタグ一覧では全体の変更履歴に飛ぶようになっている。
+</code></pre></td></tr></table>
+</div>
+</div><p>各投稿ページではGitHubのそれぞれの変更履歴に飛び、トップページやタグ一覧では全体の変更履歴に飛ぶようになっている。
 <code>historyBaseURL</code>は<code>config.toml</code>で下記のように定義できる。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[<span style=color:#a6e22e>params</span>]
-<span style=color:#a6e22e>historyBaseURL</span> = <span style=color:#e6db74>&#34;https://github.com/kozmof/kozmof.github.io/commits/main/content/&#34;</span>
-</code></pre></div>
+<div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml>[params]
+historyBaseURL = <span style=color:#d20;background-color:#fff0f0>&#34;https://github.com/kozmof/kozmof.github.io/commits/main/content/&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div>
 </section>
 <div class=post-tags>
 <nav class="nav tags">

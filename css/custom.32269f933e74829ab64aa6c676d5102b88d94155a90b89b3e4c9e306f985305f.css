@@ -34,3 +34,8 @@ hr {
     border-top: 1px solid var(--bordercl);
     margin: 1em 0;
 }
+
+.highlight {
+    background-color: white;
+    color: #1a1a1a
+}

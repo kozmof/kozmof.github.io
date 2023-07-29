@@ -16,7 +16,7 @@
 <link href=https://kozmof.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css rel=stylesheet>
 <link rel=stylesheet type=text/css media=screen href=https://kozmof.github.io/css/main.471d35085b12235392ba2d98fc3355f902fa805ca465f1c0ad3facc5087d7871.css>
 <link id=darkModeStyle rel=stylesheet type=text/css href=https://kozmof.github.io/css/dark.73a166dae74afcfcdaefd254420a6b7358572e98210591cf63bd750b615320f1.css disabled>
-<link rel=stylesheet type=text/css href=https://kozmof.github.io/css/custom.742a92595bdf71bed5f05bf83a62788d5af1fe8fd81b1c5d9761885dc3c8b12e.css>
+<link rel=stylesheet type=text/css href=https://kozmof.github.io/css/custom.32269f933e74829ab64aa6c676d5102b88d94155a90b89b3e4c9e306f985305f.css>
 </head>
 <body>
 <div class=content><header>
@@ -28,6 +28,7 @@
 | <span id=dark-mode-toggle onclick=toggleTheme()></span> |
 <script src=https://kozmof.github.io/js/themetoggle.js></script>
 <a class=change-history alia-label="See change histories of this page" href=https://github.com/kozmof/kozmof.github.io/commits/main/content/posts/2023/05/add-model-viewer.md>変更履歴</a>
+| <a class=scrap-section alia-label="Jump to scrap section" href=https://kozmof.github.io//scrap>スクラップ</a>
 </nav>
 </header>
 <main>
@@ -39,12 +40,23 @@
 <section class=body>
 <p>Sketchfab経由などではなく、ブログにモデルを直接表示する機能があるのを見たことがないなとふと思い、モデルの表示機能を<a href=https://github.com/kozmof/archie/blob/master/layouts/shortcodes/model.html>作った</a>。</p>
 <p><a href=https://github.com/google/model-viewer>model-viewer</a>を使用し、下記のようにパスを指定すれば表示できる。</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>{{&lt;
-    <span style=color:#f92672>model</span>
-    <span style=color:#a6e22e>alt</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;Scotch Boiler from PS Waverley by Scottish Maritime Museum&#34;</span>
-    <span style=color:#a6e22e>src</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;model/scotch_boiler_from_ps_waverley_1k.glb&#34;</span>
+<div class=highlight><div style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown>{{&lt;
+    <span style=color:#b06;font-weight:700>model</span>
+    <span style=color:#369>alt</span>=<span style=color:#d20;background-color:#fff0f0>&#34;Scotch Boiler from PS Waverley by Scottish Maritime Museum&#34;</span>
+    <span style=color:#369>src</span>=<span style=color:#d20;background-color:#fff0f0>&#34;model/scotch_boiler_from_ps_waverley_1k.glb&#34;</span>
 &gt;}}
-</code></pre></div><p>
+</code></pre></td></tr></table>
+</div>
+</div><p>
 <script type=module src=https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js></script>
 <model-viewer style="min-width: 100%; min-height: 500px" alt="Scotch Boiler from PS Waverley by Scottish Maritime Museum" src=https://kozmof.github.io/model/scotch_boiler_from_ps_waverley_1k.glb ar environment-image=https://kozmof.github.io/hdr/lake_pier_1k.hdr shadow-intensity=1 camera-controls touch-action=pan-y>
 </model-viewer>
