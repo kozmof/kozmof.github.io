@@ -17,7 +17,6 @@ defaultModelMinHeight = "500px"
 
 [markup]
   [markup.highlight]
-    lineNos = true
     style = "pastie"
 
 # https://materialdesignicons.com/
